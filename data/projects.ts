@@ -105,4 +105,4 @@ export const projects: Project[] = [
     demo: "https://cooltrax.com/",
     stats: undefined,
   },
-] as const;
+];
