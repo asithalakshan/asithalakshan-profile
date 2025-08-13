@@ -32,6 +32,7 @@ import {
 } from "lucide-react";
 import ContactSection from "@/components/main/contactSection";
 import { projects, skills, experience } from "@/data";
+import { Footer, Header } from "@/components/main";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,48 +44,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-sm border-b border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-white">
-              <Code className="mr-2 h-6 w-6 inline" />
-              Asitha Lakshan
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a
-                href="#about"
-                className="text-slate-300 hover:text-white transition-colors"
-              >
-                About
-              </a>
-              <a
-                href="#skills"
-                className="text-slate-300 hover:text-white transition-colors"
-              >
-                Skills
-              </a>
-              <a
-                href="#projects"
-                className="text-slate-300 hover:text-white transition-colors"
-              >
-                Projects
-              </a>
-              <a
-                href="#experience"
-                className="text-slate-300 hover:text-white transition-colors"
-              >
-                Experience
-              </a>
-              <a
-                href="#contact"
-                className="text-slate-300 hover:text-white transition-colors"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header page="home"/>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -442,7 +402,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Link key={index} href={`/projects/${project.slug}`}>
-                <Card className="bg-slate-700/50 border-slate-600 overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+                <Card className="h-full bg-slate-700/50 border-slate-600 overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
                   <div className="aspect-video overflow-hidden">
                     <img
                       src={project.image}
@@ -516,34 +476,7 @@ export default function Home() {
       {/* Contact Section */}
       <ContactSection />
 
-      {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-700">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-slate-400 mb-4">
-            © 2024 Asitha Lakshan. Built with Next.js and Tailwind CSS.
-          </p>
-          {/* <div className="flex justify-center space-x-6">
-            <a
-              href="#"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              <Mail className="h-5 w-5" />
-            </a>
-          </div> */}
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

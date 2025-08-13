@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  Link,
   Code,
   ArrowLeft,
   ExternalLink,
@@ -17,6 +16,8 @@ import {
 } from "lucide-react";
 import { notFound } from "next/navigation";
 import { projects } from "@/data";
+import { Footer, Header } from "@/components/main";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -37,29 +38,8 @@ export default async function ProjectPage({
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-sm border-b border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link
-              href="/"
-              className="font-bold text-xl text-white flex items-center"
-            >
-              <Code className="mr-2 h-6 w-6" />
-              Asitha Lakshan
-            </Link>
-            <Link href="/#projects">
-              <Button
-                variant="outline"
-                className="border-slate-600 text-slate-300 hover:bg-slate-800"
-              >
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Projects
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      
+      <Header page="projects" />
 
       {/* Hero Section */}
       <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
@@ -190,12 +170,12 @@ export default async function ProjectPage({
                 </CardContent>
               </Card>
 
-              {/* Key Features */}
+              {/* My Collaborations */}
               <Card className="bg-slate-800/50 border-slate-700">
                 <CardHeader>
                   <CardTitle className="text-white text-2xl flex items-center">
                     <Zap className="mr-2 h-6 w-6 text-yellow-400" />
-                    Key Features
+                    My Collaborations
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -335,28 +315,7 @@ export default async function ProjectPage({
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-700 mt-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-slate-400 mb-4">
-            © 2024 Asitha Lakshan. Built with Next.js and Tailwind CSS.
-          </p>
-          {/* <div className="flex justify-center space-x-6">
-            <a
-              href="#"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              <ExternalLink className="h-5 w-5" />
-            </a>
-          </div> */}
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
