@@ -16,7 +16,7 @@ export const experience = [
     {
       title: "Trainee Software Engineer",
       company: "Cloud Eight Technologies",
-      period: "2022 October - 2022 May",
+      period: "2021 October - 2022 May",
       description:
         "Built responsive user interfaces and implemented modern design systems. Collaborated with UX/UI designers to create seamless user experiences.",
     },

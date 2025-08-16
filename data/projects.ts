@@ -158,4 +158,46 @@ export const projects: Project[] = [
     demo: "https://www.phantm.com/",
     stats: undefined,
   },
+  {
+    slug: "leos",
+    title: "Leos",
+    category: "Ride Hailing App",
+    description:
+      "LEOS is a ride-hailing app designed to connect people and places",
+    longDescription:
+      "LEOS is a ride-hailing app designed to connect people and places. Currently available in Colombo, LEOS offers reliable, affordable rides and is expanding to other regions of Sri Lanka in the near future. Built with the latest technology, LEOS provides a seamless user experience for both drivers and riders. We focus on fair pricing and efficient rides while ensuring a safe and reliable service.",
+    tech: [
+      "Next.js",
+      "Typescript",
+      "Go Lang",
+      "Java",
+      "Serverless",
+      "GRPC",
+      "Aws",
+      "Goose",
+      "PostgreSQL",
+      "Terraform"
+    ],
+    technologies: {
+      frontend: ["Next.js", "Typescript", "Antd"],
+      backend: ["Typescript", "Java", "Go Lang", "Spring Boot", "Qurakus", "Serverless", "GRPC"],
+      database: ["PostgreSQL", "DyanmoDB", "Redis"],
+      deployment: ["Goose", "Terraform"],
+      aws: ["ECS", "ALB", "Cognito", "Lambda", "Api Gateway", "Route 53", "S3","Cloudwatch", "RDS", "Amplify"],
+      mobile: ["Flutter"],
+    },
+    image: "/images/leos.png",
+    features: [
+      "Architected and developed the pricing microservices with Java, SPring boot and JEasy rule engine",
+      "Architected and developed consumer management microservice with Go Lang and Hexagonal Architecture",
+      "Designed and developed web views as Java Quarkus microservice to embed with the mobile application web views",
+      "Setup multiple auth server support across the microservices",
+    ],
+    challenges: [
+      "Rapidly changing requirements and tight deadlines",
+    ],
+    github: undefined,
+    demo: "https://www.leos.one/",
+    stats: undefined,
+  },
 ];
