@@ -54,6 +54,7 @@ export const projects: Project[] = [
     },
     image: "/images/phantm-captr.png",
     features: [
+      "Played the lead role in the project",
       "Architected and developed the serverless backend services",
       "Created and maintained the CI/CD pipeline for frontend and backend services with gihub actions",
       "Designed and developed the PostgreSQL database schema and migrations using Flyway",
